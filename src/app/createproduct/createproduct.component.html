@@ -1,0 +1,13 @@
+<p>createproduct works!</p>
+<div class="container">
+  <form [formGroup]="formvalue" (submit)="submit()">
+    <label for="name">Product Name</label>
+    <input type="text" id="name" name="name" placeholder="Product Name" formControlName="name">
+    <label for="description">Product desription</label>
+    <textarea id="description" name="description" placeholder="Write something about product.."  formControlName="description" style="height:200px"></textarea>
+    <label for="image">product picrure</label><br>
+      <input type="file" (change)="onchange($event)">
+
+    <input type="submit" value="Submit">
+  </form>
+</div>

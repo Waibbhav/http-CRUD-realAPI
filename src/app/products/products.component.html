@@ -1,0 +1,28 @@
+
+<table>
+    <tr>
+      <th style="width: 180px;">Title</th>
+      <th style="width:800px">Description</th>
+      <th>Image</th>
+    </tr>
+   
+     <tr style="height: 150px;" *ngFor="let x of products">
+      <td>{{x.title}}</td>
+      <td>{{x.description}}</td>
+      
+      <td>
+        <img src="https://wtsacademy.dedicateddevelopers.us/uploads/product/{{x.image}}" style="height: 150px;">
+        <div class="button">
+        <button  routerLink="/details/{{x._id}}">detail</button>
+        </div><br><br>
+        <div class="button">
+        <button (click)="delet($event)" id="{{x._id}}" >delete</button>
+         </div>
+     </td>
+    </tr>
+  </table>
+  <div class="button">
+    <button (click)="prev()">prev</button> &nbsp; &nbsp; <button (click)="next()">next</button>
+  </div>
+  <router-outlet></router-outlet>
+  

@@ -1,0 +1,42 @@
+<!-- 
+<div *ngFor="let x of user">
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{x.first_name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <mat-card-title>{{x.first_name}}</mat-card-title>
+        <mat-card-title>{{x.last_name}}</mat-card-title>
+        <mat-card-title>{{x.email}}</mat-card-title>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="logout()" >logout</button>
+      
+    </mat-card-actions>
+  </mat-card>
+
+</div> -->
+
+
+
+  <mat-card class="example-card">
+      <mat-card-header>
+        
+        <mat-card-title>{{userdetail.first_name}}</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="{{img_url}}" style="width: 200px;">
+      <mat-card-content>
+          <mat-card-title>First Name : {{userdetail.first_name}}</mat-card-title>
+          <mat-card-title>Last Name : {{userdetail.last_name}}</mat-card-title>
+          <mat-card-title>Email : {{userdetail.email}}</mat-card-title>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="logout()" >logout</button>
+        
+      </mat-card-actions>
+    </mat-card>
+  
+
+  

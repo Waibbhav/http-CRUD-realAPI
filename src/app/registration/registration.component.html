@@ -1,0 +1,23 @@
+
+<div class="container">
+    <form action="/action_page.php" [formGroup]="formData" (submit)="submitData()">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name.." formControlName="first_name">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name.." formControlName="last_name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enail.." formControlName="email">
+
+      <label for="password">password</label>
+      <input type="password" id="password" name="password" placeholder="password.." formControlName="password"><br>
+
+      <label for="profile">profile picture </label><br>
+      <input type="file" (change)="onchange($event)" >
+  
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  
+  

@@ -1,0 +1,27 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+    
+      <div *ngIf="!islogin()">
+     <button routerLink="/register">Signup</button><br><br><br>
+     <button routerLink="/login">Singin</button><br><br><br>
+     </div>
+     <div *ngIf="islogin()">
+      <button routerLink="/products">products</button><br><br><br>
+      <button routerLink="/addproduct">create products</button><br><br><br>
+     <button routerLink="/user">user</button><br><br><br>
+     <button (click)="logout()" >logout</button>
+     </div>
+      <!-- <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+      <button (click)="showFiller = !showFiller" mat-raised-button>
+        Toggle extra text
+      </button> -->
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button>
+    </div>
+  
+  </mat-drawer-container>
+  <router-outlet></router-outlet>
